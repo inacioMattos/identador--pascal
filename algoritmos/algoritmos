@@ -28,6 +28,24 @@ TUDO
 
 
 
-	Função 
+	Função APLICAR_REGRAS(CODIGO, REGRAS):
+
+		REGRA <- ESCOLHER_REGRA(CODIGO, REGRAS);
+
+		Se REGRA = NULL, retorne NULL;
+		Senao:
+
+
+
+
+	Função ESCOLHER_REGRA(CODIGO, REGRAS):
+	
+		Para cada LINHA n em CODIGO faça:
+				Para cada REGRA r em REGRAS faça:
+					Se IS_APLICAVEL(CODIGO[n], REGRAS[r]), retorne REGRAS[r];
+
+		Retorne NULL;
+
+	FIM FUNÇÃO
 
 }
