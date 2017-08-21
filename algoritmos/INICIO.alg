@@ -1,4 +1,3 @@
-```
 Função INICIO():
 
 	CODIGO, LINGUAGEM <- INPUT();
@@ -10,4 +9,3 @@ Função INICIO():
 	RESULTADO <- IDENTAR(CODIGO, REGRAS);
 
 	OUTPUT(RESULTADO);
-```
