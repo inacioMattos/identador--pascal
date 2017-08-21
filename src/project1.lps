@@ -8,10 +8,9 @@
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos X="23" Y="10"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -21,14 +20,22 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="21" Y="24"/>
-
-        <UsageCount Value="21"/>
-
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
+        <Filename Value="regras.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="REGRAS"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="39" Y="14"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
         <Filename Value="unit1.lfm"/>
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
@@ -37,15 +44,6 @@
         <CursorPos X="17" Y="8"/>
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="regras.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="REGRAS"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="39" Y="14"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
       </Unit3>
     </Units>
     <JumpHistory Count="2" HistoryIndex="1">
