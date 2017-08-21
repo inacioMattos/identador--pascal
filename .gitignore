@@ -66,3 +66,4 @@ backup/
 src/backup/
 *.bak
 lib/
+src/lib/
