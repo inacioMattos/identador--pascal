@@ -34,7 +34,10 @@ TUDO
 
 		Se REGRA = NULL, retorne NULL;
 		Senao:
+			CODIGO <- REGRA_APL(CODIGO, REGRA);
+			Retorne CODIGO;
 
+	FIM FUNÇÃO
 
 
 
