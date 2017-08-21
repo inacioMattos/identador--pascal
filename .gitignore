@@ -63,5 +63,6 @@ Thumbs.db
 # Lazarus backups and unit output folders.
 # These can be changed by user in Lazarus/project options.
 backup/
+src/backup/
 *.bak
 lib/
