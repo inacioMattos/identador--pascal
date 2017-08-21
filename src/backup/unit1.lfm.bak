@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 267
-  Height = 741
-  Top = 123
-  Width = 759
+  Left = 438
+  Height = 966
+  Top = 146
+  Width = 758
   Caption = 'Form1'
-  ClientHeight = 741
-  ClientWidth = 759
+  ClientHeight = 966
+  ClientWidth = 758
   LCLVersion = '1.6.4.0'
   object Label1: TLabel
     Left = 254
@@ -20,7 +20,7 @@ object Form1: TForm1
     Height = 25
     Top = 112
     Width = 75
-    Caption = 'pequeno'
+    Caption = 'GRANDAO'
     TabOrder = 0
   end
 end
