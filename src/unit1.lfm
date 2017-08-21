@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 435
-  Height = 964
-  Top = 144
+  Left = 267
+  Height = 741
+  Top = 123
   Width = 759
   Caption = 'Form1'
-  ClientHeight = 964
+  ClientHeight = 741
   ClientWidth = 759
   LCLVersion = '1.6.4.0'
   object Label1: TLabel
@@ -14,5 +14,13 @@ object Form1: TForm1
     Width = 47
     Caption = 'meu pau'
     ParentColor = False
+  end
+  object Button1: TButton
+    Left = 240
+    Height = 25
+    Top = 112
+    Width = 75
+    Caption = 'pequeno'
+    TabOrder = 0
   end
 end
