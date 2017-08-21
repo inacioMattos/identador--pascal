@@ -4,5 +4,7 @@ Função APLICAR_REGRAS(CODIGO, REGRAS):
 
 		Se REGRA = NULL, retorne NULL;
 		Senao:
+			CODIGO <- REGRA_APL(CODIGO, REGRA);
+			Retorne CODIGO;
 
 FIM FUNÇÃO
