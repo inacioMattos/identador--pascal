@@ -21,6 +21,7 @@ type
 
 var
   Form1: TForm1;
+  a: Integer;
 
 implementation
 
