@@ -1,0 +1,5 @@
+Função IDENTAR(CODIGO, REGRAS):
+
+	Se APLICAR_REGRAS(CODIGO, REGRAS) = NULL, retorne CODIGO
+	Senão:
+		
