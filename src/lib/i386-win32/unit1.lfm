@@ -1,0 +1,18 @@
+object Form1: TForm1
+  Left = 447
+  Height = 939
+  Top = 153
+  Width = 733
+  Caption = 'Form1'
+  ClientHeight = 939
+  ClientWidth = 733
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 146
+    Height = 15
+    Top = 62
+    Width = 250
+    Caption = 'bem vindo a esse maravilhoso program HEHEH'
+    ParentColor = False
+  end
+end
