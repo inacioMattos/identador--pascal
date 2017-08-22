@@ -13,9 +13,9 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    Memo1: TMemo;
-    Panel1: TPanel;
-    Panel2: TPanel;
+    txtCodigo: TMemo;
+    panel1: TPanel;
+    panel2: TPanel;
   private
     { private declarations }
   public

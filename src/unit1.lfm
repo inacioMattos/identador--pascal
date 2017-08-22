@@ -1,40 +1,37 @@
 object Form1: TForm1
-  Left = 244
+  Left = 478
   Height = 865
-  Top = 1
+  Top = 249
   Width = 733
   Caption = 'Form1'
   ClientHeight = 865
   ClientWidth = 733
   LCLVersion = '1.6.4.0'
-  object Panel2: TPanel
+  object panel2: TPanel
     Left = -8
     Height = 104
     Top = 56
     Width = 746
-    Caption = 'Panel2'
+    BevelOuter = bvNone
     Color = 16243872
     ParentColor = False
     TabOrder = 2
   end
-  object Memo1: TMemo
+  object txtCodigo: TMemo
     Left = 0
     Height = 714
     Top = 152
     Width = 733
     BorderStyle = bsNone
     Color = 16777190
-    Lines.Strings = (
-      'Memo1'
-    )
     TabOrder = 0
   end
-  object Panel1: TPanel
+  object panel1: TPanel
     Left = -8
     Height = 72
     Top = -8
     Width = 746
-    Caption = 'Panel1'
+    BevelOuter = bvNone
     Color = 13218690
     ParentColor = False
     TabOrder = 1
