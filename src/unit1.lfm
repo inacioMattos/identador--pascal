@@ -11,10 +11,10 @@ object Form1: TForm1
     Left = -8
     Height = 736
     Top = 144
-    Width = 42
+    Width = 48
     ClientHeight = 736
-    ClientWidth = 42
-    Color = 16243872
+    ClientWidth = 48
+    Color = 16777190
     ParentColor = False
     TabOrder = 3
     object num1: TLabel
@@ -41,6 +41,15 @@ object Form1: TForm1
       Caption = '3'
       ParentColor = False
     end
+  end
+  object txtCodigo: TMemo
+    Left = 32
+    Height = 706
+    Top = 160
+    Width = 701
+    BorderStyle = bsNone
+    Color = 16777190
+    TabOrder = 0
   end
   object panelMeio: TPanel
     Left = -8
@@ -101,14 +110,5 @@ object Form1: TForm1
       ParentColor = False
       ParentFont = False
     end
-  end
-  object txtCodigo: TMemo
-    Left = 32
-    Height = 714
-    Top = 152
-    Width = 701
-    BorderStyle = bsNone
-    Color = 16777190
-    TabOrder = 0
   end
 end
