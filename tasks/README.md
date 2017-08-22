@@ -16,4 +16,5 @@ Aqui tem uma lista de coisas que devemos nos focar e finalizar; divido em três 
 
 ## Pascal:
 [ ] Ter um brainstorm com todos para chegarmos em um consenso de qual tipo de varíavel utilizar;
+
 [ ] Ter um brainstorm com todos para chegarmos em um consenso de como será feito as regras;
