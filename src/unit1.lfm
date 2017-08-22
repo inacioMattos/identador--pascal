@@ -1,20 +1,21 @@
 object Form1: TForm1
   Left = 230
-  Height = 813
+  Height = 741
   Top = 111
   Width = 733
+  BorderStyle = bsSingle
   Caption = 'IDENTADOR'
-  ClientHeight = 813
+  ClientHeight = 741
   ClientWidth = 733
   LCLVersion = '1.6.4.0'
   object panelEsquerda: TPanel
     Left = -8
     Height = 736
     Top = 144
-    Width = 48
+    Width = 42
     ClientHeight = 736
-    ClientWidth = 48
-    Color = 16777190
+    ClientWidth = 42
+    Color = 16243872
     ParentColor = False
     TabOrder = 3
     object num1: TLabel
@@ -26,7 +27,7 @@ object Form1: TForm1
       ParentColor = False
     end
     object num2: TLabel
-      Left = 22
+      Left = 20
       Height = 15
       Top = 32
       Width = 6
@@ -41,15 +42,6 @@ object Form1: TForm1
       Caption = '3'
       ParentColor = False
     end
-  end
-  object txtCodigo: TMemo
-    Left = 32
-    Height = 706
-    Top = 160
-    Width = 701
-    BorderStyle = bsNone
-    Color = 16777190
-    TabOrder = 0
   end
   object panelMeio: TPanel
     Left = -8
@@ -98,9 +90,9 @@ object Form1: TForm1
     TabOrder = 1
     object labelTitulo: TLabel
       Left = 288
-      Height = 42
+      Height = 40
       Top = 24
-      Width = 175
+      Width = 179
       Caption = 'O Identador'
       Font.CharSet = ANSI_CHARSET
       Font.Height = -35
@@ -110,5 +102,14 @@ object Form1: TForm1
       ParentColor = False
       ParentFont = False
     end
+  end
+  object txtCodigo: TMemo
+    Left = 32
+    Height = 714
+    Top = 152
+    Width = 701
+    BorderStyle = bsNone
+    Color = 16777190
+    TabOrder = 0
   end
 end
