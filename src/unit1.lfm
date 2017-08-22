@@ -2,11 +2,11 @@ object Form1: TForm1
   Left = 230
   Height = 741
   Top = 111
-  Width = 733
-  BorderStyle = bsSingle
+  Width = 699
+  BorderStyle = bsDialog
   Caption = 'IDENTADOR'
   ClientHeight = 741
-  ClientWidth = 733
+  ClientWidth = 699
   LCLVersion = '1.6.4.0'
   object panelEsquerda: TPanel
     Left = -8
