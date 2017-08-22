@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 478
+  Left = 457
   Height = 865
-  Top = 249
+  Top = 194
   Width = 733
   Caption = 'Form1'
   ClientHeight = 865
@@ -32,8 +32,24 @@ object Form1: TForm1
     Top = -8
     Width = 746
     BevelOuter = bvNone
+    ClientHeight = 72
+    ClientWidth = 746
     Color = 13218690
     ParentColor = False
     TabOrder = 1
+    object Label1: TLabel
+      Left = 280
+      Height = 43
+      Top = 24
+      Width = 175
+      Caption = 'O Identador'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -35
+      Font.Name = 'Roboto Th'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
   end
 end

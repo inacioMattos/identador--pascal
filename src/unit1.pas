@@ -13,6 +13,7 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    Label1: TLabel;
     txtCodigo: TMemo;
     panel1: TPanel;
     panel2: TPanel;
