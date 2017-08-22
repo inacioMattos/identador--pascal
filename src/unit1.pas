@@ -5,16 +5,17 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
-    Label1: TLabel;
-    Label2: TLabel;
+    Memo1: TMemo;
+    Panel1: TPanel;
+    Panel2: TPanel;
   private
     { private declarations }
   public
