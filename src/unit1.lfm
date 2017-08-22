@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 457
-  Height = 865
-  Top = 194
+  Left = 550
+  Height = 741
+  Top = 113
   Width = 733
-  Caption = 'Form1'
-  ClientHeight = 865
+  Caption = 'IDENTADOR'
+  ClientHeight = 741
   ClientWidth = 733
   LCLVersion = '1.6.4.0'
   object panel2: TPanel
@@ -39,9 +39,9 @@ object Form1: TForm1
     TabOrder = 1
     object labelTitulo: TLabel
       Left = 288
-      Height = 43
+      Height = 40
       Top = 24
-      Width = 175
+      Width = 179
       Caption = 'O Identador'
       Font.CharSet = ANSI_CHARSET
       Font.Height = -35
