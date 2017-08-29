@@ -25,6 +25,7 @@ type
     txtCodigo: TMemo;
     panel1: TPanel;
     panel2: TPanel;
+    procedure panelMeioClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -39,6 +40,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.panelMeioClick(Sender: TObject);
+begin
+
+end;
 
 end.
 
