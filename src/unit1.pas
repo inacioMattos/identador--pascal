@@ -9,7 +9,8 @@ uses
   ExtCtrls;
 
 type
-
+    arrString = array[0..9999] of string;
+    arrInt = array[0..9999] of integer;
   { TForm1 }
 
   TForm1 = class(TForm)
@@ -25,6 +26,7 @@ type
     txtCodigo: TMemo;
     panel1: TPanel;
     panel2: TPanel;
+    procedure botaoIdentarClick(Sender: TObject);
     procedure panelMeioClick(Sender: TObject);
   private
     { private declarations }
@@ -36,8 +38,12 @@ type
 var
   Form1: TForm1;
   a: Integer;
+  code: TStrings;
 
 implementation
+
+uses
+  unit_regras;
 
 {$R *.lfm}
 
@@ -46,6 +52,30 @@ implementation
 procedure TForm1.panelMeioClick(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.botaoIdentarClick(Sender: TObject);
+var
+  index: Integer;
+begin
+     index := linguagens.ItemIndex;
+     code := txtCodigo.Lines;
+     if (index = -1) then
+     begin
+       application.messagebox('por favor, selecione uma linguagem antes!', 'error 404', 0);
+     end
+
+     else begin
+          if (index = 0) then begin
+            code := set_regras('Pascal', code);
+          end;
+
+          if (index = 1) then begin
+            code := set_regras('C#', code);
+          end;
+     end;
+
+     txtCodigo.Lines := code;
 end;
 
 end.
