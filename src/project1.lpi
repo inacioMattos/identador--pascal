@@ -44,7 +44,7 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1unit_regras"/>
+        <UnitName Value="Unit1"/>
       </Unit1>
       <Unit2>
         <Filename Value="regras.pas"/>

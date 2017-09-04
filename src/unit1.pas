@@ -1,3 +1,6 @@
+// TAB: #9;
+// NEW LINE: #13#10;
+
 unit Unit1;
 
 {$mode objfpc}{$H+}
@@ -28,6 +31,7 @@ type
     panel2: TPanel;
     procedure botaoIdentarClick(Sender: TObject);
     procedure panelMeioClick(Sender: TObject);
+    procedure txtCodigoChange(Sender: TObject);
   private
     { private declarations }
   public
@@ -54,6 +58,19 @@ begin
 
 end;
 
+
+procedure TForm1.txtCodigoChange(Sender: TObject);
+begin
+    if (txtCodigo.Lines.Count > 39) then
+    begin
+        txtCodigo.ScrollBars := ssVertical;
+    end
+    else begin
+        txtCodigo.ScrollBars := ssNone;
+    end;
+end;
+
+
 procedure TForm1.botaoIdentarClick(Sender: TObject);
 var
   index: Integer;
@@ -79,4 +96,3 @@ begin
 end;
 
 end.
-
