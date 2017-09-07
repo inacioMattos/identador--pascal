@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 99
+  Left = 397
   Height = 741
-  Top = 111
+  Top = 116
   Width = 721
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsNone
@@ -9,47 +9,13 @@ object Form1: TForm1
   ClientHeight = 741
   ClientWidth = 721
   LCLVersion = '1.6.4.0'
-  object panelMeio: TPanel
-    Left = -8
-    Height = 104
-    Top = 56
-    Width = 730
-    BevelOuter = bvNone
-    ClientHeight = 104
-    ClientWidth = 730
-    Color = 16243872
-    ParentColor = False
-    TabOrder = 2
-    OnClick = panelMeioClick
-    object linguagens: TComboBox
-      Left = 312
-      Height = 23
-      Top = 32
-      Width = 124
-      ItemHeight = 15
-      Items.Strings = (
-        'Pascal'
-        'C#'
-      )
-      Style = csDropDownList
-      TabOrder = 0
-    end
-    object botaoIdentar: TButton
-      Left = 336
-      Height = 25
-      Top = 64
-      Width = 75
-      Caption = 'identar!'
-      TabOrder = 1
-    end
-  end
   object panelCima: TPanel
     Left = -8
-    Height = 72
+    Height = 80
     Top = -8
     Width = 730
     BevelOuter = bvNone
-    ClientHeight = 72
+    ClientHeight = 80
     ClientWidth = 730
     Color = 13218690
     ParentColor = False
@@ -60,7 +26,7 @@ object Form1: TForm1
     OnMouseUp = panelCimaMouseUp
     object labelTitulo: TLabel
       Left = 288
-      Height = 42
+      Height = 43
       Top = 24
       Width = 175
       Caption = 'O Identador'
@@ -73,21 +39,58 @@ object Form1: TForm1
       ParentFont = False
     end
     object Button1: TButton
-      Left = 640
+      Left = 681
       Height = 25
-      Top = 24
+      Top = 8
       Width = 48
       Caption = 'X'
       OnClick = Button1Click
       TabOrder = 0
     end
     object Button2: TButton
-      Left = 592
+      Left = 640
       Height = 25
-      Top = 24
+      Top = 8
       Width = 40
       Caption = '_'
       OnClick = Button2Click
+      TabOrder = 1
+    end
+  end
+  object panelMeio: TPanel
+    Left = -9
+    Height = 80
+    Top = 72
+    Width = 730
+    BevelOuter = bvNone
+    ClientHeight = 80
+    ClientWidth = 730
+    Color = 16243872
+    ParentColor = False
+    TabOrder = 2
+    OnClick = panelMeioClick
+    OnMouseDown = panelCimaMouseDown
+    OnMouseMove = panelCimaMouseMove
+    OnMouseUp = panelCimaMouseUp
+    object linguagens: TComboBox
+      Left = 312
+      Height = 23
+      Top = 8
+      Width = 124
+      ItemHeight = 15
+      Items.Strings = (
+        'Pascal'
+        'C#'
+      )
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object botaoIdentar: TButton
+      Left = 336
+      Height = 25
+      Top = 40
+      Width = 75
+      Caption = 'identar!'
       TabOrder = 1
     end
   end
@@ -98,10 +101,13 @@ object Form1: TForm1
     Width = 701
     BorderStyle = bsNone
     Color = 16777190
+    OnMouseDown = panelCimaMouseDown
+    OnMouseMove = panelCimaMouseMove
+    OnMouseUp = panelCimaMouseUp
     TabOrder = 0
   end
   object panelEsquerda: TPanel
-    Left = -8
+    Left = -9
     Height = 728
     Top = 152
     Width = 42
@@ -111,6 +117,9 @@ object Form1: TForm1
     Color = 16777190
     ParentColor = False
     TabOrder = 3
+    OnMouseDown = panelCimaMouseDown
+    OnMouseMove = panelCimaMouseMove
+    OnMouseUp = panelCimaMouseUp
     object num1: TLabel
       Left = 20
       Height = 15
