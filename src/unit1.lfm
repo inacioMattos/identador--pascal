@@ -1,4 +1,5 @@
 object Form1: TForm1
+
   Left = 397
   Height = 741
   Top = 115
@@ -10,11 +11,13 @@ object Form1: TForm1
   ClientWidth = 699
   LCLVersion = '1.6.4.0'
   object panelMeio: TPanel
+
     Left = -8
     Height = 104
     Top = 56
     Width = 746
     BevelOuter = bvNone
+
     ClientHeight = 104
     ClientWidth = 746
     Color = 16243872
@@ -114,6 +117,7 @@ object Form1: TForm1
       Width = 6
       Caption = '3'
       ParentColor = False
+
     end
   end
 end

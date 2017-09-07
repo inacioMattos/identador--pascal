@@ -32,6 +32,12 @@ type
     procedure botaoIdentarClick(Sender: TObject);
     procedure panelMeioClick(Sender: TObject);
     procedure txtCodigoChange(Sender: TObject);
+
+    labelTitulo: TLabel;
+    txtCodigo: TMemo;
+    panel1: TPanel;
+    panel2: TPanel;
+
   private
     { private declarations }
   public

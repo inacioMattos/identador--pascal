@@ -8,9 +8,11 @@
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
+
         <EditorIndex Value="3"/>
         <CursorPos Y="20"/>
         <UsageCount Value="93"/>
+
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,9 +22,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+
         <TopLine Value="25"/>
         <CursorPos X="24" Y="78"/>
         <UsageCount Value="93"/>
+
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -38,6 +42,7 @@
         <Filename Value="input.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="INPUT"/>
+
         <EditorIndex Value="-1"/>
         <CursorPos X="31" Y="4"/>
         <UsageCount Value="89"/>
@@ -62,6 +67,7 @@
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
+
         <Filename Value="unit1.lfm"/>
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
@@ -70,9 +76,11 @@
         <CursorPos X="17" Y="8"/>
         <UsageCount Value="3"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
+
       </Unit6>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
+
       <Position1>
         <Filename Value="unit_regras.pas"/>
         <Caret Line="65" TopLine="43"/>
@@ -82,6 +90,7 @@
         <Caret Line="69" TopLine="43"/>
       </Position2>
       <Position3>
+
         <Filename Value="unit_regras.pas"/>
         <Caret Line="70" TopLine="43"/>
       </Position3>
@@ -193,6 +202,7 @@
         <Filename Value="unit_regras.pas"/>
         <Caret Line="63" TopLine="43"/>
       </Position30>
+
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
