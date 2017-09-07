@@ -1,22 +1,22 @@
 object Form1: TForm1
-  Left = 435
+  Left = 99
   Height = 741
-  Top = 154
-  Width = 699
+  Top = 111
+  Width = 721
   BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
+  BorderStyle = bsNone
   Caption = 'IDENTADOR'
   ClientHeight = 741
-  ClientWidth = 699
+  ClientWidth = 721
   LCLVersion = '1.6.4.0'
   object panelMeio: TPanel
     Left = -8
     Height = 104
     Top = 56
-    Width = 746
+    Width = 730
     BevelOuter = bvNone
     ClientHeight = 104
-    ClientWidth = 746
+    ClientWidth = 730
     Color = 16243872
     ParentColor = False
     TabOrder = 2
@@ -47,16 +47,20 @@ object Form1: TForm1
     Left = -8
     Height = 72
     Top = -8
-    Width = 746
+    Width = 730
     BevelOuter = bvNone
     ClientHeight = 72
-    ClientWidth = 746
+    ClientWidth = 730
     Color = 13218690
     ParentColor = False
     TabOrder = 1
+    OnClick = panelCimaClick
+    OnMouseDown = panelCimaMouseDown
+    OnMouseMove = panelCimaMouseMove
+    OnMouseUp = panelCimaMouseUp
     object labelTitulo: TLabel
       Left = 288
-      Height = 43
+      Height = 42
       Top = 24
       Width = 175
       Caption = 'O Identador'
@@ -67,6 +71,24 @@ object Form1: TForm1
       Font.Quality = fqDraft
       ParentColor = False
       ParentFont = False
+    end
+    object Button1: TButton
+      Left = 640
+      Height = 25
+      Top = 24
+      Width = 48
+      Caption = 'X'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 592
+      Height = 25
+      Top = 24
+      Width = 40
+      Caption = '_'
+      OnClick = Button2Click
+      TabOrder = 1
     end
   end
   object txtCodigo: TMemo
