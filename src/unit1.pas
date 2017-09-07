@@ -14,8 +14,6 @@ type
 
   TForm1 = class(TForm)
     botaoIdentar: TButton;
-    Button1: TButton;
-    Button2: TButton;
     Image1: TImage;
     linguagens: TComboBox;
     labelTitulo: TLabel;

@@ -26,9 +26,9 @@ object Form1: TForm1
     OnMouseUp = panelCimaMouseUp
     object labelTitulo: TLabel
       Left = 288
-      Height = 43
+      Height = 40
       Top = 24
-      Width = 175
+      Width = 179
       Caption = 'O Identador'
       Font.CharSet = ANSI_CHARSET
       Font.Height = -35
@@ -37,24 +37,6 @@ object Form1: TForm1
       Font.Quality = fqDraft
       ParentColor = False
       ParentFont = False
-    end
-    object Button1: TButton
-      Left = 64
-      Height = 25
-      Top = 32
-      Width = 48
-      Caption = 'X'
-      OnClick = Button1Click
-      TabOrder = 0
-    end
-    object Button2: TButton
-      Left = 136
-      Height = 25
-      Top = 32
-      Width = 40
-      Caption = '_'
-      OnClick = Button2Click
-      TabOrder = 1
     end
     object Image1: TImage
       Left = 664
