@@ -77,7 +77,7 @@ end;
 
 procedure TForm1.Image1MouseEnter(Sender: TObject);
 begin
-    ShowMessage('oia');
+
 end;
 
 procedure TForm1.panelCimaClick(Sender: TObject);
