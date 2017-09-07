@@ -31,6 +31,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Image1Click(Sender: TObject);
+    procedure Image1MouseEnter(Sender: TObject);
     procedure panelCimaClick(Sender: TObject);
     procedure panelCimaMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -72,6 +73,11 @@ end;
 procedure TForm1.Image1Click(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TForm1.Image1MouseEnter(Sender: TObject);
+begin
+    ShowMessage('oia');
 end;
 
 procedure TForm1.panelCimaClick(Sender: TObject);
