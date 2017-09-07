@@ -16,6 +16,7 @@ type
     botaoIdentar: TButton;
     Button1: TButton;
     Button2: TButton;
+    Image1: TImage;
     linguagens: TComboBox;
     labelTitulo: TLabel;
     num1: TLabel;
@@ -29,6 +30,7 @@ type
     panel2: TPanel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
     procedure panelCimaClick(Sender: TObject);
     procedure panelCimaMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -65,6 +67,11 @@ end;
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   Application.Minimize;
+end;
+
+procedure TForm1.Image1Click(Sender: TObject);
+begin
+  Application.Terminate;
 end;
 
 procedure TForm1.panelCimaClick(Sender: TObject);
