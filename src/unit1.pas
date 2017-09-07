@@ -33,10 +33,6 @@ type
     procedure panelMeioClick(Sender: TObject);
     procedure txtCodigoChange(Sender: TObject);
 
-    labelTitulo: TLabel;
-    txtCodigo: TMemo;
-    panel1: TPanel;
-    panel2: TPanel;
 
   private
     { private declarations }
