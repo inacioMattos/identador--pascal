@@ -47,7 +47,7 @@ var
 implementation
 
 uses
-  unit_regras;
+  unit_regras, ORegra;
 
 {$R *.lfm}
 
@@ -77,6 +77,7 @@ var
 begin
      index := linguagens.ItemIndex;
      code := txtCodigo.Lines;
+     
      if (index = -1) then
      begin
        application.messagebox('por favor, selecione uma linguagem antes!', 'error 404', 0);
@@ -90,6 +91,8 @@ begin
           if (index = 1) then begin
             code := set_regras('C#', code);
           end;
+
+          code := identar(code);
      end;
 
      txtCodigo.Lines := code;

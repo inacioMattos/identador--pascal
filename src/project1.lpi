@@ -61,9 +61,8 @@
         <IsPartOfProject Value="True"/>
       </Unit4>
       <Unit5>
-        <Filename Value="oregra.pas"/>
+        <Filename Value="ORegra.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="ORegra"/>
       </Unit5>
     </Units>
   </ProjectOptions>
