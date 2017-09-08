@@ -1,8 +1,10 @@
 object Form1: TForm1
-  Left = 400
+
+  Left = 397
   Height = 741
-  Top = 117
-  Width = 721
+  Top = 115
+  Width = 699
+
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsNone
   Caption = 'IDENTADOR'
@@ -579,6 +581,9 @@ object Form1: TForm1
       Items.Strings = (
         'Pascal'
         'C#'
+        'Java'
+        'C'
+        'C++'
       )
       Style = csDropDownList
       TabOrder = 0
@@ -589,16 +594,18 @@ object Form1: TForm1
       Top = 40
       Width = 75
       Caption = 'identar!'
+      OnClick = botaoIdentarClick
       TabOrder = 1
     end
   end
   object txtCodigo: TMemo
     Left = 32
-    Height = 714
+    Height = 586
     Top = 152
-    Width = 701
+    Width = 667
     BorderStyle = bsNone
     Color = 16777190
+    OnChange = txtCodigoChange
     TabOrder = 0
   end
   object panelEsquerda: TPanel
@@ -618,7 +625,7 @@ object Form1: TForm1
     object num1: TLabel
       Left = 20
       Height = 15
-      Top = 8
+      Top = 0
       Width = 6
       Caption = '1'
       ParentColor = False
@@ -626,7 +633,7 @@ object Form1: TForm1
     object num2: TLabel
       Left = 20
       Height = 15
-      Top = 24
+      Top = 16
       Width = 6
       Caption = '2'
       ParentColor = False
@@ -634,7 +641,7 @@ object Form1: TForm1
     object num3: TLabel
       Left = 20
       Height = 15
-      Top = 40
+      Top = 32
       Width = 6
       Caption = '3'
       ParentColor = False

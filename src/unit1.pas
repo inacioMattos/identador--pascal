@@ -1,3 +1,6 @@
+// TAB: #9;
+// NEW LINE: #13#10;
+
 unit Unit1;
 
 {$mode objfpc}{$H+}
@@ -9,7 +12,8 @@ uses
   ExtCtrls;
 
 type
-
+    arrString = array[0..9999] of string;
+    arrInt = array[0..9999] of integer;
   { TForm1 }
 
   TForm1 = class(TForm)
@@ -26,6 +30,7 @@ type
     txtCodigo: TMemo;
     panel1: TPanel;
     panel2: TPanel;
+
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Image1Click(Sender: TObject);
@@ -38,7 +43,11 @@ type
       Y: Integer);
     procedure panelCimaMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure botaoIdentarClick(Sender: TObject);
     procedure panelMeioClick(Sender: TObject);
+    procedure txtCodigoChange(Sender: TObject);
+
+
   private
     boolImg: Boolean;
     mouselsDown: Boolean;
@@ -53,8 +62,12 @@ type
 var
   Form1: TForm1;
   a: Integer;
+  code: TStrings;
 
 implementation
+
+uses
+  unit_regras, ORegra;
 
 {$R *.lfm}
 
@@ -64,6 +77,7 @@ procedure TForm1.panelMeioClick(Sender: TObject);
 begin
 
 end;
+
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
@@ -124,3 +138,44 @@ end;
 
 end.
 
+
+procedure TForm1.txtCodigoChange(Sender: TObject);
+begin
+    if (txtCodigo.Lines.Count > 39) then
+    begin
+        txtCodigo.ScrollBars := ssVertical;
+    end
+    else begin
+        txtCodigo.ScrollBars := ssNone;
+    end;
+end;
+
+
+procedure TForm1.botaoIdentarClick(Sender: TObject);
+var
+  index: Integer;
+begin
+     index := linguagens.ItemIndex;
+     code := txtCodigo.Lines;
+     
+     if (index = -1) then
+     begin
+       application.messagebox('por favor, selecione uma linguagem antes!', 'error 404', 0);
+     end
+
+     else begin
+          if (index = 0) then begin
+            code := set_regras('Pascal', code);
+          end
+
+          else begin
+            code := set_regras('C#', code);
+          end;
+
+          code := identar(code);
+     end;
+
+     txtCodigo.Lines := code;
+end;
+
+end.

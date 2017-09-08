@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "math.h"
+
+void i(int linha, int coluna, int x[linha][coluna]){
+            int a, b, colunas = linha, jk, digits = 0, wad = 0, y, z = -1, linhas = coluna;
+for(y = 0; y < linhas; y++){
+      for(b = 0; b < colunas; b++){
+                                            a = x[y][b];
+  if(a < 0) a*= -1;
+                else if(a == 0) digits = 1;
+                        else for (jk = 1; jk <= a; jk *= 10) wad++;
+           if(wad > digits) digits = wad;
+wad = 0;
+        }
+                    }
+    for(a = 0; a < linhas; a++){
+                                for(b = 0; b < colunas; b++){
+                                    y = 0;
+                                    wad = x[a][b];
+                                    if(wad < 0) a*= -1;
+else if(wad == 0) digits = 1;
+            else for (jk = 1; jk <= wad; jk *= 10) y++;
+   if(a != z)                   {
+                    printf("\n");
+                z = a;
+                                                                            }
+if(b == 0) printf("|");
+                                        for(jk = 0; jk < digits - y; jk++){
+                printf("0");
+                    }
+                                if(b != colunas - 1) printf("%d ", x[a][b]);
+                                if(b == colunas - 1) printf("%d|", x[a][b]);
+                            }
+    }
+  printf("\n");
+                                                    }
+
+void main(){
+            int x = 5;
+                            int y = 6;
+
+int m[x][y], jk, wad;
+
+                if(y > x)                      {
+                        wad = y;
+   y = x;
+                                        x = y;
+}
+
+                    for(jk = 0; jk < y; jk++){
+        for(wad = 0; wad < x; wad++){
+m[jk][wad] = (jk*x) + wad + 1;
+                                                            }
+    }
+                printf("%d", m[5][6]);
+           i(x, y, m);
+                                                                        }

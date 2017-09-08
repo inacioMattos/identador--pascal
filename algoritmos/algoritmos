@@ -1,6 +1,6 @@
 TUDO
 {
-	
+
 	Função INICIO():
 
 		CODIGO, LINGUAGEM <- INPUT();
@@ -8,7 +8,7 @@ TUDO
 
 		CODIGO <- TRATAMENTO_DO_CODIGO(REGRAS_ESPECIFICA);
 		REGRAS <- CRIAR_REGRAS();
-		
+
 		RESULTADO <- IDENTAR(CODIGO, REGRAS);
 
 		OUTPUT(RESULTADO);
@@ -42,7 +42,7 @@ TUDO
 
 
 	Função ESCOLHER_REGRA(CODIGO, REGRAS):
-	
+
 		Para cada LINHA n em CODIGO faça:
 				Para cada REGRA r em REGRAS faça:
 					Se IS_APLICAVEL(CODIGO[n], REGRAS[r]), retorne REGRAS[r];
