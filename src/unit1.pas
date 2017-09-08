@@ -18,6 +18,7 @@ type
 
   TForm1 = class(TForm)
     botaoIdentar: TButton;
+    Image1: TImage;
     linguagens: TComboBox;
     labelTitulo: TLabel;
     num1: TLabel;
@@ -29,12 +30,29 @@ type
     txtCodigo: TMemo;
     panel1: TPanel;
     panel2: TPanel;
+
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure Image1MouseEnter(Sender: TObject);
+    procedure Image1MouseLeave(Sender: TObject);
+    procedure panelCimaClick(Sender: TObject);
+    procedure panelCimaMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure panelCimaMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure panelCimaMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
     procedure botaoIdentarClick(Sender: TObject);
     procedure panelMeioClick(Sender: TObject);
     procedure txtCodigoChange(Sender: TObject);
 
 
   private
+    boolImg: Boolean;
+    mouselsDown: Boolean;
+    dx: integer;
+    dy: integer;
     { private declarations }
   public
     { public declarations }
@@ -59,6 +77,66 @@ procedure TForm1.panelMeioClick(Sender: TObject);
 begin
 
 end;
+
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  Application.Minimize;
+end;
+
+procedure TForm1.Image1Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TForm1.Image1MouseEnter(Sender: TObject);
+begin
+
+    Image1.Picture.LoadFromFile('img/btnClose (red bg).png')
+end;
+
+procedure TForm1.Image1MouseLeave(Sender: TObject);
+begin
+    Image1.Picture.LoadFromFile('img/btnClose (no bg).png')
+
+end;
+
+procedure TForm1.panelCimaClick(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.panelCimaMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  if Button = mbLeft then
+     begin
+       mouselsDown := True;
+       dx := X;
+       dy := Y;
+     end;
+end;
+
+procedure TForm1.panelCimaMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  if mouselsDown then Begin
+       SetBounds(Left + (X - dx), Top + (Y - dy), Width, Height);
+     end;
+end;
+
+procedure TForm1.panelCimaMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  mouselsDown:=False;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+end.
 
 
 procedure TForm1.txtCodigoChange(Sender: TObject);
