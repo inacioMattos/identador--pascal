@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 483
+  Left = 416
   Height = 689
-  Top = 0
+  Top = 358
   Width = 699
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsNone
@@ -26,9 +26,9 @@ object Form1: TForm1
     OnMouseUp = panelCimaMouseUp
     object labelTitulo: TLabel
       Left = 288
-      Height = 40
+      Height = 43
       Top = 24
-      Width = 179
+      Width = 175
       Caption = 'O Identador'
       Font.CharSet = ANSI_CHARSET
       Font.Height = -35
@@ -1103,7 +1103,7 @@ object Form1: TForm1
   end
   object txtCodigo: TMemo
     Left = 32
-    Height = 586
+    Height = 532
     Top = 152
     Width = 667
     BorderStyle = bsNone
@@ -1119,8 +1119,7 @@ object Form1: TForm1
     BorderStyle = bsNone
     Color = 16777190
     Lines.Strings = (
-      'Me'
-      'mo1'
+      ''
     )
     TabOrder = 3
   end

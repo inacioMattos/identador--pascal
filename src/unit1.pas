@@ -96,7 +96,7 @@ begin
      Memo1.Clear;
      for i:=0 to txtCodigo.Lines.Count -1 do
      begin
-           Memo1.Lines[i] := (IntToStr(i));
+           Memo1.Lines[i] := (IntToStr(i + 1));
      end;
      end;
 end;
