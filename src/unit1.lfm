@@ -556,7 +556,7 @@ object Form1: TForm1
     end
     object Image2: TImage
       Left = 592
-      Height = 34
+      Height = 32
       Top = 8
       Width = 50
       OnClick = Image2Click
@@ -1103,17 +1103,18 @@ object Form1: TForm1
   end
   object txtCodigo: TMemo
     Left = 32
-    Height = 532
+    Height = 540
     Top = 152
     Width = 667
     BorderStyle = bsNone
     Color = 16777190
     OnChange = txtCodigoChange
     TabOrder = 0
+    WantTabs = True
   end
   object Memo1: TMemo
     Left = 0
-    Height = 584
+    Height = 536
     Top = 152
     Width = 32
     BorderStyle = bsNone
