@@ -22,11 +22,8 @@ type
     Image2: TImage;
     linguagens: TComboBox;
     labelTitulo: TLabel;
-    num1: TLabel;
-    num2: TLabel;
-    num3: TLabel;
+    Memo1: TMemo;
     panelCima: TPanel;
-    panelEsquerda: TPanel;
     panelMeio: TPanel;
     txtCodigo: TMemo;
     panel1: TPanel;
@@ -69,6 +66,7 @@ var
   Form1: TForm1;
   a: Integer;
   code: TStrings;
+  i: Integer;
 
 implementation
 
@@ -92,6 +90,14 @@ begin
      end
      else begin
           txtCodigo.ScrollBars := ssNone;
+
+
+             //Apartir daqui temos a contagem de linhas :)
+     Memo1.Clear;
+     for i:=0 to txtCodigo.Lines.Count -1 do
+     begin
+           Memo1.Lines[i] := (IntToStr(i));
+     end;
      end;
 end;
 
