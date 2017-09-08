@@ -60,9 +60,10 @@ object Form1: TForm1
       Left = 664
       Height = 32
       Top = 8
-      Width = 66
+      Width = 72
       OnClick = Image1Click
       OnMouseEnter = Image1MouseEnter
+      OnMouseLeave = Image1MouseLeave
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963D63E000089504E47
         0D0A1A0A0000000D4948445200000048000000220806000000FC829F7B000000
@@ -616,9 +617,6 @@ object Form1: TForm1
     Width = 701
     BorderStyle = bsNone
     Color = 16777190
-    OnMouseDown = panelCimaMouseDown
-    OnMouseMove = panelCimaMouseMove
-    OnMouseUp = panelCimaMouseUp
     TabOrder = 0
   end
   object panelEsquerda: TPanel

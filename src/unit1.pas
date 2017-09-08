@@ -32,6 +32,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image1MouseEnter(Sender: TObject);
+    procedure Image1MouseLeave(Sender: TObject);
     procedure panelCimaClick(Sender: TObject);
     procedure panelCimaMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -41,6 +42,7 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure panelMeioClick(Sender: TObject);
   private
+    boolImg: Boolean;
     mouselsDown: Boolean;
     dx: integer;
     dy: integer;
@@ -77,7 +79,12 @@ end;
 
 procedure TForm1.Image1MouseEnter(Sender: TObject);
 begin
-    ShowMessage('oia');
+    Image1.Picture.LoadFromFile('img/btnClose (red bg).png')
+end;
+
+procedure TForm1.Image1MouseLeave(Sender: TObject);
+begin
+    Image1.Picture.LoadFromFile('img/btnClose (no bg).png')
 end;
 
 procedure TForm1.panelCimaClick(Sender: TObject);
