@@ -9,7 +9,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls;
+  ExtCtrls, ComCtrls, Crt;
 
 type
     arrString = array[0..9999] of string;
@@ -19,6 +19,7 @@ type
   TForm1 = class(TForm)
     botaoIdentar: TButton;
     Image1: TImage;
+    Label1: TLabel;
     linguagens: TComboBox;
     labelTitulo: TLabel;
     num1: TLabel;
@@ -27,8 +28,10 @@ type
     panelCima: TPanel;
     panelEsquerda: TPanel;
     panelMeio: TPanel;
+    p: TProgressBar;
+    t: TTimer;
     txtCodigo: TMemo;
-    panel1: TPanel;
+    panelLoading: TPanel;
     panel2: TPanel;
 
     procedure botaoIdentarClick(Sender: TObject);
@@ -46,6 +49,8 @@ type
       Shift: TShiftState; X, Y: Integer);
 
     procedure panelMeioClick(Sender: TObject);
+    procedure tStopTimer(Sender: TObject);
+    procedure tTimer(Sender: TObject);
     procedure txtCodigoChange(Sender: TObject);
 
 
@@ -80,6 +85,17 @@ begin
 
 end;
 
+procedure TForm1.tStopTimer(Sender: TObject);
+begin
+    ShowMessage('helo');
+end;
+
+procedure TForm1.tTimer(Sender: TObject);
+begin
+     p.Max := t.Interval;
+     p.Position := p.Position + 1;
+end;
+
 procedure TForm1.txtCodigoChange(Sender: TObject);
 begin
      if (txtCodigo.Lines.Count > 39) then
@@ -104,6 +120,17 @@ begin
      end
 
      else begin
+
+          panelLoading.Visible := True;
+          panelLoading.Enabled := True;
+
+          t.Interval := txtCodigo.Lines.Count;
+          t.Enabled := True;
+
+          txtCodigo.Color := $00FFFFF2;
+
+          Delay(1000);
+
           if (index = 0) then begin
             code := set_regras('Pascal', code);
           end
@@ -116,6 +143,8 @@ begin
      end;
 
      txtCodigo.Lines := code;
+
+     txtCodigo.Color := $00FFFFE6;
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
