@@ -1,0 +1,82 @@
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+   max: integer;
+   min: integer;
+   i: integer;
+   j: integer;
+   x: integer;
+   cont: integer;
+   y:integer;
+begin
+   x:=0;
+   if TryStrToInt(edit1.Text, min) and TryStrToInt(edit2.Text, max) then
+    begin
+      max:= Strtoint (Edit2.Text);
+      min:= Strtoint (Edit1.Text);
+     end
+    else begin
+      label13.Caption :='Valores Inválidos';
+  if (max<min) then
+     begin
+       label13.Caption:='Erro, valor mínimo é maior que o máximo :(';
+     end;
+         end;
+  if (min>0) and (max>0) then      //positivos
+     begin
+          label8.Caption:=' ';
+       while (min<=max) Do begin
+          label8.Caption := Label8.Caption+'  '+IntToStr(min);
+          min :=min+1;
+             end;
+             end
+  else if (min<0) and (max<0) then       //negativo
+     begin
+       label9.Caption:=' ';
+       while (min<max) Do begin
+          label9.Caption := Label9.Caption+'  '+IntToStr(min);
+          min :=min+1;
+     end;
+ end
+  else if (max>0) and (min<0)then    // intervalo
+     begin
+      label8.Caption:=' ';
+      label9.Caption:=' ';
+   for i:=min to -1 do
+      begin
+      label9.Caption := Label9.Caption+'  '+IntToStr(i);
+      end;
+   for i:=1 to max do
+      begin
+       label8.Caption := Label8.Caption+'  '+IntToStr(i);
+      end;
+    end;
+  //numeros pares
+      label10.Caption:=' ';
+      label11.Caption:=' ';
+       while (min<max) Do begin
+          j := min mod 2;
+          if (j=0) then begin
+          label10.Caption := Label10.Caption+'  '+IntToStr(min);
+          end  //impares
+          else begin
+          label11.Caption := Label11.Caption+'  '+IntToStr(min);
+          end;
+          min+=1;
+       end;
+       //primo
+       label12.Caption:=' ';
+       x:=0;
+       cont:=0;
+       while (min<max) DO Begin
+          y:= min mod x;
+          if (y=0) then begin
+          cont:=cont+1;
+          if (cont=2) then begin
+          label12.Caption := Label12.Caption+'  '+IntToStr(min);
+          min+=1;
+          x+=1;
+         end;
+      end;
+   end;
+end;
