@@ -558,8 +558,10 @@ object Form1: TForm1
       Left = 592
       Height = 34
       Top = 8
-      Width = 42
+      Width = 50
       OnClick = Image2Click
+      OnMouseEnter = Image2MouseEnter
+      OnMouseLeave = Image2MouseLeave
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869639F3D000089504E47
         0D0A1A0A0000000D494844520000003A0000002208060000000E3ECADE000000

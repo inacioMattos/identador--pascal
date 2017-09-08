@@ -39,6 +39,8 @@ type
     procedure Image1MouseEnter(Sender: TObject);
     procedure Image1MouseLeave(Sender: TObject);
     procedure Image2Click(Sender: TObject);
+    procedure Image2MouseEnter(Sender: TObject);
+    procedure Image2MouseLeave(Sender: TObject);
     procedure panelCimaClick(Sender: TObject);
     procedure panelCimaMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -150,6 +152,16 @@ end;
 procedure TForm1.Image2Click(Sender: TObject);
 begin
   Application.Minimize;
+end;
+
+procedure TForm1.Image2MouseEnter(Sender: TObject);
+begin
+  Image2.Picture.LoadFromFile('img/minimizar-bg.png')
+end;
+
+procedure TForm1.Image2MouseLeave(Sender: TObject);
+begin
+  Image2.Picture.LoadFromFile('img/minimizar-nobg.png')
 end;
 
 procedure TForm1.panelCimaClick(Sender: TObject);
