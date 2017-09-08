@@ -14,8 +14,6 @@ type
 
   TForm1 = class(TForm)
     botaoIdentar: TButton;
-    Button1: TButton;
-    Button2: TButton;
     Image1: TImage;
     linguagens: TComboBox;
     labelTitulo: TLabel;
@@ -79,12 +77,14 @@ end;
 
 procedure TForm1.Image1MouseEnter(Sender: TObject);
 begin
+
     Image1.Picture.LoadFromFile('img/btnClose (red bg).png')
 end;
 
 procedure TForm1.Image1MouseLeave(Sender: TObject);
 begin
     Image1.Picture.LoadFromFile('img/btnClose (no bg).png')
+
 end;
 
 procedure TForm1.panelCimaClick(Sender: TObject);
