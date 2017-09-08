@@ -13,6 +13,7 @@ function blocks(code: TStrings; lineNumber: Integer): TStrings;
 function identar(code: TStrings): TStrings;
 function breakLine(code: TStrings): TStrings;
 function adjustBlocks(code: TStrings): TStrings;
+function deleteBlocks(code: TStrings): TStrings;
 
 
 implementation
@@ -46,7 +47,40 @@ begin
         i += 1;
     end;
 
+    code := deleteBlocks(code);
     identar := code;
+end;
+
+
+function deleteBlocks(code: TStrings): TStrings;
+var
+    line: String;
+    i: Integer = 0;
+    indexCHE: Integer;
+    indexCHB: Integer;
+begin
+    while (i < code.Count) do
+    begin
+        line := code[i];
+        indexCHB := pos('$CHB$', line);
+        indexCHE := pos('$CHE$', line);
+
+        if (indexCHE > 0) then
+        begin
+            Delete(line, indexCHE, 5);
+        end;
+
+        if (indexCHB > 0) then
+        begin
+            Delete(line, indexCHB, 5);
+        end;
+
+        code[i] := line;
+        i += 1;
+
+    end;
+
+    deleteBlocks := code;
 end;
 
 
