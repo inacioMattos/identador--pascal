@@ -52,6 +52,7 @@ type
     procedure tStopTimer(Sender: TObject);
     procedure tTimer(Sender: TObject);
     procedure txtCodigoChange(Sender: TObject);
+    procedure loading();
 
 
 
@@ -107,6 +108,19 @@ begin
      end;
 end;
 
+
+procedure loading();
+begin
+          panelLoading.Visible := True;
+          panelLoading.Enabled := True;
+
+          t.Interval := txtCodigo.Lines.Count;
+          t.Enabled := True;
+
+          txtCodigo.Color := $00FFFFF2;
+end;
+
+
 procedure TForm1.botaoIdentarClick(Sender: TObject);
 var
   index: Integer;
@@ -120,16 +134,10 @@ begin
      end
 
      else begin
+          loading();
 
-          panelLoading.Visible := True;
-          panelLoading.Enabled := True;
 
-          t.Interval := txtCodigo.Lines.Count;
-          t.Enabled := True;
 
-          txtCodigo.Color := $00FFFFF2;
-
-          Delay(1000);
 
           if (index = 0) then begin
             code := set_regras('Pascal', code);
@@ -141,7 +149,7 @@ begin
 
           code := identar(code);
      end;
-
+          Delay(1000);
      txtCodigo.Lines := code;
 
      txtCodigo.Color := $00FFFFE6;
