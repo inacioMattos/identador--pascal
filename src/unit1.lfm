@@ -1,15 +1,13 @@
 object Form1: TForm1
-
   Left = 397
   Height = 741
   Top = 115
   Width = 699
-
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsNone
   Caption = 'IDENTADOR'
   ClientHeight = 741
-  ClientWidth = 721
+  ClientWidth = 699
   LCLVersion = '1.6.4.0'
   object panelCima: TPanel
     Left = -9
@@ -28,9 +26,9 @@ object Form1: TForm1
     OnMouseUp = panelCimaMouseUp
     object labelTitulo: TLabel
       Left = 288
-      Height = 40
+      Height = 43
       Top = 24
-      Width = 179
+      Width = 175
       Caption = 'O Identador'
       Font.CharSet = ANSI_CHARSET
       Font.Height = -35
@@ -41,7 +39,7 @@ object Form1: TForm1
       ParentFont = False
     end
     object Image1: TImage
-      Left = 664
+      Left = 640
       Height = 32
       Top = 8
       Width = 72

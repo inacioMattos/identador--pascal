@@ -31,6 +31,7 @@ type
     panel1: TPanel;
     panel2: TPanel;
 
+    procedure botaoIdentarClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Image1Click(Sender: TObject);
@@ -43,9 +44,10 @@ type
       Y: Integer);
     procedure panelCimaMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
-    procedure botaoIdentarClick(Sender: TObject);
+
     procedure panelMeioClick(Sender: TObject);
     procedure txtCodigoChange(Sender: TObject);
+
 
 
   private
@@ -78,6 +80,48 @@ begin
 
 end;
 
+procedure TForm1.txtCodigoChange(Sender: TObject);
+begin
+     if (txtCodigo.Lines.Count > 39) then
+     begin
+          txtCodigo.ScrollBars := ssVertical;
+     end
+     else begin
+          txtCodigo.ScrollBars := ssNone;
+     end;
+end;
+
+procedure TForm1.botaoIdentarClick(Sender: TObject);
+var
+  index: Integer;
+begin
+     index := linguagens.ItemIndex;
+     code := txtCodigo.Lines;
+
+     if (index = -1) then
+     begin
+       application.messagebox('por favor, selecione uma linguagem antes!', 'error 404', 0);
+     end
+
+     else begin
+          if (index = 0) then begin
+            code := set_regras('Pascal', code);
+          end
+
+          else begin
+            code := set_regras('C#', code);
+          end;
+
+          code := identar(code);
+     end;
+
+     txtCodigo.Lines := code;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+
+end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
@@ -131,10 +175,6 @@ begin
   mouselsDown:=False;
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
-begin
-  Application.Terminate;
-end;
 
 end.
 
@@ -151,31 +191,6 @@ begin
 end;
 
 
-procedure TForm1.botaoIdentarClick(Sender: TObject);
-var
-  index: Integer;
-begin
-     index := linguagens.ItemIndex;
-     code := txtCodigo.Lines;
-     
-     if (index = -1) then
-     begin
-       application.messagebox('por favor, selecione uma linguagem antes!', 'error 404', 0);
-     end
 
-     else begin
-          if (index = 0) then begin
-            code := set_regras('Pascal', code);
-          end
-
-          else begin
-            code := set_regras('C#', code);
-          end;
-
-          code := identar(code);
-     end;
-
-     txtCodigo.Lines := code;
-end;
 
 end.
