@@ -88,9 +88,9 @@ begin
      else begin
           if (index = 0) then begin
             code := set_regras('Pascal', code);
-          end;
+          end
 
-          if (index = 1) then begin
+          else begin
             code := set_regras('C#', code);
           end;
 
