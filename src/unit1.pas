@@ -19,13 +19,11 @@ type
   TForm1 = class(TForm)
     botaoIdentar: TButton;
     Image1: TImage;
+    Image2: TImage;
     linguagens: TComboBox;
     labelTitulo: TLabel;
-    num1: TLabel;
-    num2: TLabel;
-    num3: TLabel;
+    Memo1: TMemo;
     panelCima: TPanel;
-    panelEsquerda: TPanel;
     panelMeio: TPanel;
     txtCodigo: TMemo;
     panel1: TPanel;
@@ -37,6 +35,9 @@ type
     procedure Image1Click(Sender: TObject);
     procedure Image1MouseEnter(Sender: TObject);
     procedure Image1MouseLeave(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image2MouseEnter(Sender: TObject);
+    procedure Image2MouseLeave(Sender: TObject);
     procedure panelCimaClick(Sender: TObject);
     procedure panelCimaMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -65,6 +66,7 @@ var
   Form1: TForm1;
   a: Integer;
   code: TStrings;
+  i: Integer;
 
 implementation
 
@@ -88,6 +90,14 @@ begin
      end
      else begin
           txtCodigo.ScrollBars := ssNone;
+
+
+             //Apartir daqui temos a contagem de linhas :)
+     Memo1.Clear;
+     for i:=0 to txtCodigo.Lines.Count -1 do
+     begin
+           Memo1.Lines[i] := (IntToStr(i + 1));
+     end;
      end;
 end;
 
@@ -143,6 +153,21 @@ procedure TForm1.Image1MouseLeave(Sender: TObject);
 begin
     Image1.Picture.LoadFromFile('img/btnClose (no bg).png')
 
+end;
+
+procedure TForm1.Image2Click(Sender: TObject);
+begin
+  Application.Minimize;
+end;
+
+procedure TForm1.Image2MouseEnter(Sender: TObject);
+begin
+  Image2.Picture.LoadFromFile('img/minimizar-bg.png')
+end;
+
+procedure TForm1.Image2MouseLeave(Sender: TObject);
+begin
+  Image2.Picture.LoadFromFile('img/minimizar-nobg.png')
 end;
 
 procedure TForm1.panelCimaClick(Sender: TObject);
