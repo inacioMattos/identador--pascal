@@ -1,3 +1,5 @@
+### [EDIT]: Para fazer o download do Identador e usar no seu computador, basta acessar o aba 'releases' ou clicar [aqui](https://github.com/inacioMattos/identador--pascal/releases)
+
 # Identador de código em Pascal
 
    Este projeto é sobre um desenvolvimento de um software cuja função seja aceitar um determinado código e mostrar como resultado o mesmo identado, inicialmente, utilizando o Allman-6 Style.
